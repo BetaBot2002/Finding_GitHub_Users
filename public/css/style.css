@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(150deg, #0e5162, #4d8692);
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container {
+    background: linear-gradient(145deg, #000428, #004e92);
+    display: none;
+    border-radius: 20px;
+    max-width: 70rem;
+    /* width: 70rem; */
+    /* height: 30rem; */
+    /* background-color: red; */
+    padding: 2rem 3rem;
+    /* margin: auto;
+     */
+    isolation: isolate;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.block {
+    position: relative;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.block:before,
+.block:after {
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: -6px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 14px);
+    height: calc(100% + 8px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.block:after {
+    filter: blur(50px);
+}
+
+#Profile-img {
+    width: 10rem;
+    /* height: 10rem; */
+    /* clip-path: circle(50%); */
+    /* border: 10px solid #004e92; */
+    border-radius: 50%;
+}
+
+.Search_box {
+    /* background: red; */
+    width: 70vw;
+    /* height: 15%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 11.1rem;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 1rem;
+    border-radius: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.btn {
+    width: 52px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 21%;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    align-items: center;
+}
+
+.cover {
+    width: 60px;
+    /* background: transparent; */
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 21%;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(200, 183, 183, 0.3) 0px 18px 36px -18px inset;
+    filter: blur(2px);
+}
+
+.inner-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.username {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    color: whitesmoke;
+}
+
+.username h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+#github-username {
+    font-family: cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px;
+    color: #08d6ff;
+    /* scale: 1.3; */
+}
+
+i,
+span {
+    font-size: 25px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.profile-bio {
+    font-size: 28px;
+    font-family: 'Baloo Da 2', cursive;
+    word-wrap: break-word;
+    color: cyan;
+}
+
+#localdot {
+    color: #6dd5ed;
+    scale: 0.8;
+    font-size: 20px;
+    display: none;
+}
+
+#country {
+    color: #6dd5ed;
+    scale: 0.8;
+    font-size: 20px;
+}
+
+.repo {
+    text-decoration: none;
+    color: #fff;
+    background-color: #212a72;
+    font-size: 1rem;
+    font-family: cursive;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1.5rem;
+    display: inline-block;
+}
+
+@media only screen and (max-width:768px) {
+    .Search_box {
+        position: sticky;
+        top: 2%;
+        width: 100vw;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        font-size: 15px;
+    }
+
+    .btn,
+    .cover {
+        right: 11%;
+    }
+
+    .main-container {
+        scale: 0.8;
+        font-size: 35px;
+    }
+
+    .repo {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block {
+        position: relative;
+        width: 10rem;
+        border-radius: 50%;
+    }
+
+    .block:before,
+    .block:after {
+        border-radius: 50%;
+        content: '';
+        position: absolute;
+        left: -9px;
+        top: -9px;
+        background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+                #0000ff, #00ff00, #ffff00, #ff0000);
+        background-size: 400%;
+        width: calc(100% + 17px);
+        height: calc(100% + 10px);
+        z-index: -1;
+        animation: steam 20s linear infinite;
+    }
+
+    @keyframes steam {
+        0% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 400% 0;
+        }
+
+        100% {
+            background-position: 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .wrapper {
+        scale: 0.73;
+    }
+}
+
+@media only screen and (max-width : 375px) {
+    .Search_box{
+        margin : 10px;
+    }
+}
+
+.footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Baloo Da 2', cursive;
+    color: #000428;
+}

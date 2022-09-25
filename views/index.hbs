@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Finder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="Search_box" id="Form">
+            <input type="text" id="Search_Key" name="Keyword" autocomplete="off" placeholder="Search a Github User...">
+            <div class="cover"></div>
+            <button class="btn" onclick="getResultFromUrL()"><img
+                    src="https://img.icons8.com/color/48/000000/search--v1.png" /></button>
+        </div>
+        <div class="main-container">
+            <div class="inner-flex">
+                <div class="block">
+                    <img src="#" id="Profile-img" alt="">
+                </div>
+                <div class="username">
+                    <h2 id="Full-name"></h2>
+                    <p id="github-username"></p>
+                    <i class="fa-solid fa-location-dot" id="localdot"></i><span id="country"></span>
+                </div>
+            </div>
+            <div class="profile-bio">
+                <div class="main-content">
+                    <em>
+                        <p id="content"></p>
+                    </em>
+                </div>
+            </div>
+            <div class="social">
+                <div class="following">
+                    <i class="fa-solid fa-user" title="followings" style="cursor: pointer;"></i><span
+                        id="followings"></span>
+                </div>
+                <div class="followers">
+                    <i class="fa-solid fa-circle-user" title="followers"></i><span id="followers"></span>
+                </div>
+                <div class="repository">
+                    <i class="fa-brands fa-github" title="repositories"></i><span id="repository"></span>
+                </div>
+            </div>
+            <div id="repos"></div>
+        </div>
+
+        <div class="footer">
+            <p>Designed with 💖 by Ayush Singh Rajput🔱</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

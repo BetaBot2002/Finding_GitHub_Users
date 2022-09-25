@@ -1,0 +1,17 @@
+{
+  "name": "github-profile_finder",
+  "version": "1.0.0",
+  "description": "Profile Finding of all github users",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon src/app.js"
+  },
+  "author": "Ayush Singh Rajput",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.20"
+  }
+}
