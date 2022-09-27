@@ -7,6 +7,7 @@ const getResultFromUrL = async () => {
     const repository = document.getElementById("repository");
     const github_username = document.getElementById("github-username");
     const Content = document.getElementById("content");
+    const linkUser=document.querySelector('.linkUser')
     // console.log(username.value);
     try {
         let GitHubAPI = `https://api.github.com/users/${username.value}`;
@@ -16,9 +17,11 @@ const getResultFromUrL = async () => {
         document.querySelector("#Profile-img").src = `${data.avatar_url}`;
         if (data.name != null) {
             name.innerText = `${data.name}`;
+        }else{
+            name.innerText = " ";
         }
-        
-        // console.log(data.location);
+         
+        linkUser.href=`${data.html_url}`;
         if (data.location != null) {
             // console.log("Enterred");
             const country = document.getElementById("country");
